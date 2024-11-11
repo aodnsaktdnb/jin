@@ -6,108 +6,124 @@
     <title>Document</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
-      table {
-        border-collapse: collapse;
-        background-color: rgb(184, 146, 196);
-        margin: 0 auto;
-        vertical-align: top;
-        width: 400px;
-        height: 200px;
+      #index-page * {
+        text-align: center;
       }
 
-      th,
-      td {
-        border: 2px solid #ffffff;
-        vertical-align: top;
-        text-align: center;
-        color: #6047ec;
+      a {
+        text-decoration: none;
       }
-      h1,
-      h2 {
+      .ex-menu {
+        background-color: rgb(177, 247, 221);
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 0.5rem;
+        margin: 0 5% 14px;
+        border-radius: 1.5rem;
+      }
+
+      .menu-list {
+        grid-column: 1 / -1;
+        font-size: 1rem;
+        margin: 0.5rem 10% 1rem;
+        background: rgb(199, 162, 248);
+        border: 0.5px solid #aaa;
+        border-radius: 1rem;
+        display: inline-block;
         text-align: center;
       }
-      td {
-        width: 100px;
-        vertical-align: top;
-        text-align: center;
+
+      .ex-menu a,
+      .ex-menu a:visited {
+        font-size: 1.5rem;
+        color: rgb(133, 48, 244);
+        border-radius: 1.5rem;
+      }
+
+      .ex-menu a:hover {
+        color: #eae4de;
+        background: rgb(199, 162, 248);
         cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <h1>HTML 특강</h1>
-    <h2>데이터크롤링 대비</h2>
-    <!-- table>tr>th^tr>(td{예제$})*3 -->
-    <table>
-      <tr>
-        <th>1일차</th>
-        <th>2일차</th>
-        <th>3일차</th>
-        <th>4일차</th>
-        <th>5일차</th>
-      </tr>
-      <tr>
-        <td>
-          <a href="ex01-01.html">예제 1</a><br />
-          <a href="ex01-02.html">예제 2</a><br />
-          <a href="ex01-03.html">예제 3</a><br />
-          <a href="ex01-04.html">예제 4</a><br />
-          <a href="ex01-05.html">예제 5</a><br />
-          <a href="ex01-06.html">예제 6</a><br />
-          <a href="ex01-07.html">예제 7</a><br />
-          <a href="ex01-08.html">예제 8</a><br />
-        </td>
-        <td>
-          <a href="ex02-01.html">예제 1</a><br />
-          <a href="ex02-02.html">예제 2</a><br />
-          <a href="ex02-03.html">예제 3</a><br />
-          <a href="ex02-04.html">예제 4</a><br />
-          <a href="ex02-05.html">예제 5</a><br />
-          <a href="ex02-06.html">예제 6</a><br />
-          <a href="ex02-07.html">예제 7</a><br />
-        </td>
-        <td>
-          <a href="ex03-01.html">예제 1</a><br />
-          <a href="ex03-02.html">예제 2</a><br />
-          <a href="ex03-03.html">예제 3</a><br />
-          <a href="ex03-04.html">예제 4</a><br />
-          <a href="ex03-05.html">예제 5</a><br />
-          <a href="ex03-06.html">예제 6</a><br />
-          <a href="ex03-07.html">예제 7</a><br />
-          <a href="ex03-08.html">예제 8</a><br />
-          <a href="ex03-09.html">예제 9</a><br />
-          <a href="ex03-10.html">예제 10</a><br />
-          <a href="ex03-11.html">예제 11</a><br />
-        </td>
-        <td>
-          <a href="ex04-01.html">예제 1</a><br />
-          <a href="ex04-01a.html">예제 1a</a><br />
-          <a href="ex04-02.html">예제 2</a><br />
-          <a href="ex04-03.html">예제 3</a><br />
-          <a href="ex04-04.html">예제 4</a><br />
-          <a href="ex04-05.html">예제 5</a><br />
-          <a href="ex04-06.html">예제 6</a><br />
-          <a href="ex04-07.html">예제 7</a><br />
-          <a href="ex04-08.html">예제 8</a><br />
-        </td>
-        <td>
-          <a href="ex05-01a.html">예제 1a</a><br />
-          <a href="ex05-01b.html">예제 1b</a><br />
-          <a href="ex05-02.html">예제 2</a><br />
-          <a href="ex05-03.html">예제 3</a><br />
-          <a href="ex05-04.html">예제 4</a><br />
-          <a href="ex05-05.html">예제 5</a><br />
-          <a href="ex05-06.html">예제 6</a><br />
-          <a href="ex05-07.html">예제 7</a><br />
-          <a href="ex05-08.html">예제 8</a><br />
-        </td>
-        <td>6일차 예정</td>
-        <td>7일차 예정</td>
-      </tr>
-    </table>
+    <body>
+      <div id="index-page">
+        <h1>HTML 특강</h1>
+        <h2>예제모음</h2>
 
+        <!-- menu 시작 -->
+        <div class="ex-menu">
+          <div class="menu-list">1일차</div>
+          <a href="ex01-01.html">예제 1</a>
+          <a href="ex01-02.html">예제 2</a>
+          <a href="ex01-033.html">예제 3</a>
+          <a href="ex01-04.html">예제 4</a>
+          <a href="ex01-05.html">예제 5</a>
+          <a href="ex01-06.html">예제 6</a>
+          <a href="ex01-07.html">예제 7</a>
+          <a href="ex01-08.html">예제 8</a>
+        </div>
+
+        <div class="ex-menu">
+          <div class="menu-list">2일차</div>
+          <a href="ex02-01.html">예제 1</a>
+          <a href="ex02-02.html">예제 2</a>
+          <a href="ex02-03.html">예제 3</a>
+          <a href="ex02-04.html">예제 4</a>
+          <a href="ex02-05.html">예제 5</a>
+          <a href="ex02-06.html">예제 6</a>
+          <a href="ex02-07.html">예제 7</a>
+        </div>
+
+        <div class="ex-menu">
+          <div class="menu-list">3일차</div>
+          <a href="ex03-01.html">예제 1</a>
+          <a href="ex03-02.html">예제 2</a>
+          <a href="ex03-03.html">예제 3</a>
+          <a href="ex03-04.html">예제 4</a>
+          <a href="ex03-05.html">예제 5</a>
+          <a href="ex03-06.html">예제 6</a>
+          <a href="ex03-07.html">예제 7</a>
+          <a href="ex03-08.html">예제 8</a>
+          <a href="ex03-09.html">예제 9</a>
+          <a href="ex03-10.html">예제 10</a>
+          <a href="ex03-11.html">예제 11</a>
+        </div>
+
+        <div class="ex-menu">
+          <div class="menu-list">4일차</div>
+          <a href="ex04-01.html">예제 1</a>
+          <a href="ex04-02.html">예제 2</a>
+          <a href="ex04-03.html">예제 3</a>
+          <a href="ex04-04.html">예제 4</a>
+          <a href="ex04-05.html">예제 5</a>
+          <a href="ex04-06.html">예제 6</a>
+          <a href="ex04-07.html">예제 7</a>
+          <a href="ex04-08.html">예제 8</a>
+        </div>
+        <div class="ex-menu">
+          <div class="menu-list">5일차</div>
+          <a href="ex05-01a.html">예제 1</a>
+          <a href="ex05-01b.html">예제 1</a>
+          <a href="ex05-02.html">예제 2</a>
+          <a href="ex05-03.html">예제 3</a>
+          <a href="ex05-04.html">예제 4</a>
+          <a href="ex05-05.html">예제 5</a>
+          <a href="ex05-06.html">예제 6</a>
+          <a href="ex05-07.html">예제 7</a>
+          <a href="ex05-08.html">예제 8</a>
+        </div>
+        <!-- menu 마침 -->
+      </div>
+    </body>
     <!--<h3><a href="/ex01-01.html">예제1 헤딩</a></h3>-->
   </body>
 </html>
