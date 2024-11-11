@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 (표)</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        background-color: blanchedalmond;
+      }
+      th,
+      td {
+        border: 1px solid #55026c;
+        text-align: center;
+        width: 20%;
+      }
+      th {
+        background-color: rgb(4, 66, 45);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h3><a href="index.html">홈으로</a></h3>
+    <table>
+      <tr>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+      </tr>
+      <tr>
+        <td rowspan="2">국밥</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td rowspan="2">스파게티</td>
+      </tr>
+      <tr>
+        <td colspan="3">라면</td>
+      </tr>
+      <tr>
+        <td>10000</td>
+        <td>6000</td>
+        <td>6000</td>
+        <td>6000</td>
+        <td>15000</td>
+      </tr>
+    </table>
+  </body>
+</html>

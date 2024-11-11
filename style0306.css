@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(237, 233, 200);
+  height: 100%;
+}
+
+@media (max-width: 2400px) {
+  body {
+    color: white;
+    background: url(https://i.namu.wiki/i/WlSL5uFsJ-DIp7CCDV61uKeHqI6FnhOEh6muWz_uXa90ZgP56f8gU33y5R94_6Ru71W-e7PtPYajKOXI4531DEeNbGEesx_xqhxBjtnbn17lPvrOCDZ9hYsGmO4WLUQ6ZXJLzIzrIZeLtuYInOo4pg.webp)
+      no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    border-bottom: 1px solid black;
+    padding: 10px;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    color: white;
+    background: url(https://i.namu.wiki/i/rPt7Oo-NTxKCoflniF5A-Wq8bRcwxQUndl6LviBznu-DgXZ3Ns9cCQEhlBtraq9RjjJYSs-L2cHUqzhbXxZTdQPFJb5fH0cUA8HrpldHONtORwP2kWWG5h_JA8bqd4RnFxnGgV60R8-hpX8G_2jgKw.webp);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    color: white;
+    background: url(https://i.namu.wiki/i/gEtSXElo_UQSL27s5hC748c93Wx0c7S45FF0r8taH2ZlJi3a1O_zQgQnGi_ScfMvZCE5pwxJd2876b_n6Ps2tOGL_g8686fseNvnGtvyH5o1KhKU2mrtn1IrxblCZmZR8-DAnnHg3ZOY5IqJ_4nVEA.webp);
+  }
+}
+h1 {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+span {
+  padding: 5px;
+}

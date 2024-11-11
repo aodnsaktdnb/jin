@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3><a href="index.html">홈으로</a></h3>
+    <fieldset>
+      <legend>이름양식</legend>
+      <form action="myform" method="GET">
+        <label for="First-Name">First name:</label>
+        <input
+          type="text"
+          name="firstName"
+          id="First-Name"
+          placeholder="이름"
+          value="길동"
+        /><br />
+        <label for="Last-Name">Last name:</label>
+        <input
+          type="text"
+          name="lastName"
+          id="Last-Name"
+          placeholder="성"
+          required
+        /><br />
+        <label for="Age">Age:</label>
+        <input
+          type="number"
+          name="number"
+          id="Age"
+          min="12"
+          max="20"
+          step="1"
+          value="18"
+        /><br />
+        <label for="">checkbox1 :</label>
+        <input type="checkbox" name="chk1" /><br />
+        <label for="">checkbox2 :</label>
+        <input type="checkbox" name="chk2" /><br />
+        <label for="">radio1 :</label>
+        <input type="radio" name="tip" value="ok1" checked /><br />
+        <label for="">radio2 :</label>
+        <input type="radio" name="tip" value="ok2" /><br />
+        <label for="">radio3 :</label>
+        <input type="radio" name="tip" value="no1" /><br />
+        <label for="">radio4 :</label>
+        <input type="radio" name="tip" value="no2" checked /><br />
+
+        <label for="">password :</label>
+        <input type="password" /><br />
+        <label for="">date :</label>
+        <input type="date" /><br />
+        <label for="">time :</label>
+        <input type="time" /><br />
+        <label for="">file :</label>
+        <input type="file" /><br />숨김:
+        <input type="hidden" name="인상착의" value="잘생김" />
+        <input type="number" name="number" id="Age" /><br />
+        <input type="submit" value="보내기" />
+        <input type="reset" value="클리어" />
+        <hr />
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+      </form>
+    </fieldset>
+  </body>
+</html>

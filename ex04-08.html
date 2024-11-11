@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: rgb(245, 236, 226);
+      }
+      header,
+      footer {
+        flex: 2;
+        display: flex;
+        background-color: rgb(209, 203, 203);
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-size: 3rem;
+        padding-top: 20px;
+      }
+      header a {
+        text-decoration: none;
+        color: inherit; /* 부모 요소의 색상 사용 */
+      }
+      nav {
+        flex: 1;
+        background-color: rgb(222, 222, 197);
+      }
+      main {
+        flex: 12;
+        display: flex;
+      }
+      aside,
+      section {
+        flex: 1;
+      }
+      article {
+        flex: 3;
+        background-color: bisque;
+      }
+      footer {
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><a href="index.html">Apple</a></header>
+      <nav>nav</nav>
+      <main>
+        <aside>aside</aside>
+        <article>article</article>
+        <section>section</section>
+      </main>
+      <footer>
+        Copyright © 2024 Apple Inc. 모든 권리 보유. | 개인정보 처리방침 | i웹
+        사이트 이용 약관 | 판매 및 환불 | 법적 고지 | 사이트 맵
+      </footer>
+    </div>
+  </body>
+</html>

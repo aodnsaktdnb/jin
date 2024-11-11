@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgb(18, 96, 8);
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      h1 .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+      }
+      h2 {
+        text-align: center;
+        background-color: rgb(18, 96, 8);
+        border-radius: 8px;
+        color: #fff;
+      }
+      .daption {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        padding-top: 10px; /* 여백 추가 */
+      }
+      h3,
+      p {
+        text-align: center;
+        margin: 5px 0;
+      }
+      img {
+        width: 100%;
+        /* height: auto; */
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      li {
+        margin: 5px;
+        width: 300px;
+        border: 1px solid #222;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .prod-list {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+      }
+      .daption {
+        position: absolute;
+        top: 200px;
+        width: 300px;
+        height: 250px;
+        background-color: rgba(18, 96, 8, 0.7);
+        color: #fff;
+        text-align: center;
+        z-index: 10;
+        opacity: 0;
+        border-radius: 10px;
+        transition: all 0.5s ease-in-out;
+        justify-content: center;
+      }
+      .prod-list li:hover .daption {
+        opacity: 1;
+        transform: translateY(-185px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img src="logo.png" alt="로고" class="logo" />
+      <span>Classic Football Shirts</span>
+    </h1>
+    <div class="box">
+      <h2>이벤트 상품</h2>
+      <ul class="prod-list">
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//4/e/4e02bbbd843a34961cce9479070811a0eebd2bf2292178aa1c66a8ad9feaa9ee.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>리버풀FC</h3>
+            <p>사비알론소 06-07 HOME</p>
+            <p>가격: 222,450원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//a/f/af15f032b3d60b532708d87ae2d4b5acac8bf956e89e36b4443c39a940a78bd0.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>바르셀로나FC</h3>
+            <p>사비 에르난데스 00-01 HOME</p>
+            <p>가격: 221,500원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//4/0/40aa5c6ebdfc2c08c191644fc15fd9908f90760b4a0f9da76109fb91e9f35e5d.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>레알마드리드CF</h3>
+            <p>지단 02-03 HOME</p>
+            <p>가격: 311,000원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//9/f/9f342cad2718b5ba68f103ae979f26e418092177b60fb2f061ce800de3972e98.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>아스날</h3>
+            <p>파브레가스 08-09 HOME</p>
+            <p>가격: 141,111원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//4/b/4be74d81519b24e80411cd63f22b54d6b447d2b4c55a91b0b8e598b85682c485.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>AC밀란</h3>
+            <p>셰프첸코 04-05 HOME</p>
+            <p>가격: 251,320원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//5/f/5f136aceb801c29ede9c17f40dd820d6a558be9de77832d804528a87478ab23b.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>인터밀란</h3>
+            <p>호나우두 03-04 HOME</p>
+            <p>가격: 261,560원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//5/e/5eea1d4d36d2313df85f7ac70abb6ebe5f22785c99a8315f80b0f41e296621d5.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>유벤투스</h3>
+            <p>델피에로 01-02 HOME</p>
+            <p>가격: 71,111원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/d/cdafe6555f9fa3c555b072b1203aa037ba2b2b0c1952d22609267d5f5aebcb85.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>바이에른 뮌헨</h3>
+            <p>미하엘 발락 04-05 AWAY</p>
+            <p>가격: 151,000원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//4/4/448708fa39a189fae40b3963dee84ffdf75ec57c2078d90d56852681f42ee032.jpeg"
+            alt=""
+          />
+          <div class="daption">
+            <h3>첼시FC</h3>
+            <p>지안플랑코 졸라 98-99 HOME</p>
+            <p>가격: 391,420원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
