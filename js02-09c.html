@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <script>
+      const color = ["#837ae9", "black", "coral", "skyblue", "gray"];
+      const header = document.querySelectorAll("h1");
+      header.forEach((v, i) => {
+        v.textContent = "하2";
+        v.style.color = "white";
+        v.style.backgroundColor = color[i];
+      });
+      header[4].textContent = "끝이지롱";
+    </script>
+  </body>
+</html>
