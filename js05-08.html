@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: white;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+      .login {
+        display: none;
+        background-color: white;
+        text-align: center;
+        width: 220px;
+        padding: 10px;
+        box-shadow: 3px 3px 3px rgba(234, 231, 231, 0.5);
+        border-radius: 15px;
+      }
+      input,
+      .login button {
+        width: 100%;
+        margin: 10px auto;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 2px 2px 10px rgb(189, 187, 187);
+      }
+      .login button {
+        background-color: skyblue;
+        padding: 5px;
+        border: none;
+      }
+      input {
+        width: 96%;
+      }
+      .login-button {
+        background-color: skyblue;
+        border-radius: 15px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.login>h2{로그인}+form>input*2+button*2 -->
+    <div class="modal">
+      <div class="login" onclick="">
+        <h2>로그인</h2>
+        <form action="https://naver.com">
+          <input type="text" />
+          <input type="text" />
+          <button type="submit">로그인</button>
+          <button type="reset" onclick="modalClose()">취소</button>
+        </form>
+      </div>
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos odit tenetur
+      laboriosam temporibus accusantium, mollitia optio inventore iure. Porro
+      nobis libero suscipit? Nobis alias repellendus laborum excepturi quis
+      quaerat quam sit assumenda, blanditiis deleniti enim debitis adipisci
+      quasi dolore autem placeat, molestias fugiat, minus recusandae omnis fuga.
+      Tenetur nobis dolorum ipsa assumenda dicta unde itaque vel perferendis
+      laboriosam voluptatum facere ipsam eos, fuga cumque. Possimus, architecto
+      blanditiis. Voluptate dolor officiis, perferendis iusto blanditiis eius ex
+      est molestiae? Assumenda, omnis, dolorum quasi neque iure accusantium sit
+      possimus officia id, explicabo vel repellendus enim numquam? Eius nobis
+      vitae consectetur labore aperiam cupiditate? <br />
+      <button class="login-button" onclick="modalOpen()">
+        로그인을 하시겠습니까?
+      </button>
+    </div>
+    <script>
+      const modal = document.querySelector(".modal");
+      const login = document.querySelector(".login");
+      function modalOpen() {
+        modal.style.display = "flex";
+        login.style.display = "block";
+      }
+      function modalClose() {
+        modal.style.display = "none";
+        login.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

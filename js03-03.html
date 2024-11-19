@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto Frequency Chart</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div style="width: 80%; margin: auto">
+      <h2>로또번호 횟수 분석</h2>
+      <canvas id="lottoChart"></canvas>
+    </div>
+
+    <script>
+      // 로또 번호 출현 횟수 계산 코드
+      function lottoNumber() {
+        const lottoNumbers = new Set();
+
+        // 6개의 번호가 중복 없이 선택될 때까지 반복
+        for (let i = 0; lottoNumbers.size < 6; i++) {
+          const number = Math.floor(Math.random() * 45) + 1;
+          lottoNumbers.add(number);
+        }
+
+        return Array.from(lottoNumbers);
+      }
+
+      function validateLotto(numbers) {
+        // 1. 번호의 개수가 6개인지 확인
+        if (numbers.length !== 6) {
+          return false;
+        }
+
+        // 2. 번호가 1~45 사이에 있는지 확인
+        for (let num of numbers) {
+          if (num < 1 || num > 45) {
+            return false;
+          }
+        }
+
+        // 3. 중복이 없는지 확인
+        const uniqueNumbers = new Set(numbers);
+        if (uniqueNumbers.size !== numbers.length) {
+          return false;
+        }
+
+        return true;
+      }
+
+      // 출현 횟수를 기록할 배열 생성 (인덱스 1~45에 맞춰 초기화)
+      const count = [];
+      for (let i = 0; i < 46; i++) {
+        count[i] = 0; // 배열을 0으로 초기화
+      }
+
+      // 10만 회 반복하여 각 번호의 출현 횟수를 증가
+      for (let i = 0; i < 100000; i++) {
+        const numbers = lottoNumber();
+
+        // 번호가 유효한 경우에만 출현 횟수를 증가
+        if (validateLotto(numbers)) {
+          numbers.forEach((num) => {
+            count[num]++;
+          });
+        }
+      }
+
+      // Chart.js 차트 데이터 준비
+      const labels = [];
+      const data = [];
+
+      for (let i = 1; i <= 45; i++) {
+        labels.push(i); // 1부터 45까지의 번호
+        data.push(count[i]); // 각 번호의 출현 횟수
+      }
+
+      // 차트 생성
+      const ctx = document.getElementById("lottoChart").getContext("2d");
+      new Chart(ctx, {
+        type: "bar", // Bar 차트
+        data: {
+          labels: labels, // X축: 1부터 45까지의 번호
+          datasets: [
+            {
+              label: "로또번호 횟수",
+              data: data, // Y축: 각 번호의 출현 횟수
+              backgroundColor: "rgb(154, 162, 235)", // 바 색상
+              borderColor: "rgb(106, 90, 205)", // 바 테두리 색상
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            tooltip: {
+              enabled: true,
+            },
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "번호",
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "횟수",
+              },
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

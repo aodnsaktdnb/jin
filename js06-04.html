@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체 제거하기</title>
+    <style>
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: blanchedalmond;
+        color: rgb(144, 144, 138);
+        border-radius: 15px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        document.body.appendChild(h1);
+        h1.textContent = "곧 사라집니다.";
+        setTimeout(() => {
+          document.body.removeChild(h1);
+        }, 4000);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
