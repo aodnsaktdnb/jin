@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이벤트 설정하기</title>
+    <style>
+      h1 {
+        background-color: aqua;
+        color: rgb(28, 28, 145);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        display: inline;
+        border-radius: 10px;
+      }
+      h1:hover {
+        color: gray;
+      }
+    </style>
   </head>
   <body>
     <script>
@@ -17,6 +29,9 @@
       });
       h1.style.userSelect = "none";
       h1.style.cursor = "pointer";
+      h1.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>

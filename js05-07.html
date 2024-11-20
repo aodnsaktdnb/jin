@@ -14,25 +14,34 @@
       }
     </style>
     <script>
+      // 클릭 이벤트에서 클릭된 요소의 정보를 콘솔에 출력하는 함수
       function con(event) {
-        console.log(event);
+        console.log(event); //클릭된 요소를 출력
         console.log(event.id);
-        console.log(event.className);
+        console.log(event.className); //요소의 class 속성을 출력
       }
+      // 클릭 이벤트에서 클릭된 요소의 텍스트 내용을 콘솔에 출력함
       function con2(event) {
         console.log(event.textContent);
       }
+      //입력 필드에서 키를 누를 때마다 입력된 값을 콘솔에 출력
       function inc(e) {
-        console.log(e.value);
+        console.log(e.value); // 입력필드의 현재 값을 출력
       }
     </script>
   </head>
   <body>
+    <!-- div 요소를 클릭하면 con 함수가 실행되고, 해당 요소(this)가 전달됨 -->
     <div id="divId" class="divClass" onclick="con(this)">색상버튼</div>
+
+    <!-- 클릭 시 알림창(alert)을 띄움 -->
     <button onclick="alert('반가워요!')">동작</button>
+    <!-- 클릭 시 con 함수 실행, 버튼 요소(this)가 전달됨 -->
     <button id="bt1" class="button1" onclick="con(this)">테스트버튼1</button>
+    <!-- 클릭 시 con2 함수 실행, 버튼 요소(this)가 전달됨 -->
     <button onclick="con2(this)">테스트버튼2</button>
     <hr />
+    <!-- 입력 필드, 키보드 입력 시 inc 함수 실행 -->
     <input type="text" onkeyup="inc(this)" />
   </body>
 </html>
