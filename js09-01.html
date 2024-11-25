@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="csvFile" />
+    <button id="uploadBtn">분석</button>
+    <pre id="output"></pre>
+
+    <script>
+      document.querySelector("#loadBtn").addEventListener("click", () => {
+        const inp = document.getElementById("csvFile");
+        const file = input.file[0]; //consloe.log(inp) -> console.dir(inp)
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const text = event.target.result;
+            console.log(text);
+          };
+          reader.readAsText(file);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -15,20 +15,25 @@
           // DOMParser를 사용하여 텍스트 데이터를 HTML 문서로 파싱
           const parser = new DOMParser();
           const doc = parser.parseFromString(data, "text/html");
+
           //   const bodyContent = doc.body.innerHTML;
           //   console.log(bodyContent);
-
           // 특정 클래스 이름(board-index-img1)을 가진 요소를 선택
           const myClass = doc.querySelector(".board-index-img1");
           // 선택된 요소에서 .title 클래스를 가진 모든 요소를 찾음
+          if (!myClass) return;
           const infoTitle = myClass.querySelectorAll(".title");
           const infoSub = myClass.querySelectorAll(".sub");
+          const infoImg = myClass.querySelector("img");
           //   console.log(infoTitle);
 
           // 각 요소의 내용을 반복하여 출력
           infoTitle.forEach((v, i) => {
             // v: 현재 .title 요소
             // i: 반복 인덱스
+            const imgSrc =
+              infoImg[i]?.src ||
+              "https://www.snu.ac.kr/snunow/snu_story?md=v&bbsidx=150717";
             document.write(`<h3>${i + 1} ) ${v.innerHTML}</h3>`); //순번과 함께 타이틀 출력
             document.write(`<h5>${infoSub[i].innerHTML}</h5><hr/>`); //내용 출력
           });
